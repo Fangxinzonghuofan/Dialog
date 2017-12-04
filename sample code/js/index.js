@@ -33,10 +33,10 @@ function createDialog() {
 	//here's a simple example
       
 	navigator.notification.confirm(
-    	'Am I handsome?',  // message
+    	'Are you hungry?',  // message
         dialogDismissed,         // callback
-        'A Lie Detector',            // title
-        ['Definitely!', 'Shit']                  // buttons
+        'Little Assistant',            // title
+        ['Definitely!', 'Not really.']                  // buttons
     );
 
 }
@@ -45,8 +45,8 @@ function createDialog() {
         	
 function dialogDismissed(buttonIndex) {
 	
-	if(buttonIndex==1) new Toast({content: "You're really honest", duration: 3000});
-   	else if(buttonIndex==2) new Toast({content: 'Big liar.', duration: 3000});
+	if(buttonIndex==1) new Toast({content: "Take a break and eat some food.", duration: 3000});
+   	else if(buttonIndex==2) new Toast({content: 'Carry on working.', duration: 3000});
 
 }
 
@@ -66,8 +66,8 @@ function createNotification() {
     
     cordova.plugins.notification.local.schedule({ 
     	id: 		1,
-        title: 		"Hey you",
-        message: 	"This is an example notification",
+        title: 		"Strict Manager",
+        message: 	"You need to carry on working!",
         date: 		notificationTime, 
         badge: 		notification_count++
    	});
