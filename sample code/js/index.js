@@ -45,7 +45,26 @@ function createDialog() {
         	
 function dialogDismissed(buttonIndex) {
 	
-	if(buttonIndex==1) new Toast({content: "Take a break and eat some food.", duration: 3000});
+    if(buttonIndex==1) {
+        new Toast({content: "Take a break and eat some food.", duration: 3000});
+        
+        var currentTime = new Date().getTime(); //current time
+    var notificationTime = new Date(currentTime + 5000); //delayed time  - add 1 second
+    			
+    //
+    //setup notification
+    //
+    
+    cordova.plugins.notification.local.schedule({ 
+    	id: 		1,
+        title: 		"Strict Manager",
+        message: 	"You need to carry on working!",
+        date: 		notificationTime, 
+        badge: 		notification_count++
+   	});
+        
+    }
+    
    	else if(buttonIndex==2) new Toast({content: 'Carry on working.', duration: 3000});
 
 }
