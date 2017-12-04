@@ -45,8 +45,8 @@ function createDialog() {
         	
 function dialogDismissed(buttonIndex) {
 	
-	if(buttonIndex==1) new Toast({content: "You're easily pleased", duration: 3000});
-   	else if(buttonIndex==2) new Toast({content: 'It is rather boring.', duration: 3000});
+	if(buttonIndex==1) new Toast({content: "You're easily pleased", duration: 6000});
+   	else if(buttonIndex==2) new Toast({content: 'It is rather boring.', duration: 6000});
 
 }
 
